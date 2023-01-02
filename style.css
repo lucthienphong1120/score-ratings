@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 800px;
+    margin: auto;
+}
+
+.score {
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    background: #eee;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.rating {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    overflow: hidden;
+    width: 120px;
+    height: 120px;
+    font-size: calc(120px/4);
+    line-height: 1;
+    margin: 20px;
+}
+
+.rating span {
+    position: relative;
+    display: flex;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.rating span small {
+    font-weight: bold;
+    align-self: center;
+}
+
+.rating::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    left: 5px;
+    background: #e7f2fa;
+    border-radius: inherit;
+    z-index: 1;
+}
+
+.rating::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    left: 5px;
+}
+
+.rating.good {
+    background: #27ae60;
+    color: #27ae60;
+}
+
+.rating.med {
+    background: #f1c40f;
+    color: #f1c40f;
+}
+
+.rating.bad {
+    background: #e74c3c;
+    color: #e74c3c;
+}
